@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{TITLE}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-comp">
+        <div class="img-comp-highlight" id="highlight"></div>
+        <img
+          src={IMAGE}
+          alt="graphic"
+          class="responsive"
+        />
+      </div>
+      <div class="info-comp">
+        <h1 class="headline">
+          {PROJECT_TITLE}
+        </h1>
+        <div class="btn-group">
+          <button class="btn" onclick="backClick()">Back</button>
+          <button class="btn" onclick="nextClick()">Next</button>
+        </div>
+        <h3 class="comp-title" id="comp-title">Click Next to begin</h3>
+        <h5 class="comp-info" id="comp-info"></h5>
+      </div>
+    </div>
+    <script src="script.js" async defer></script>
+    <div id="titles" style="display: none;">{GRAPH DESC}</div>
+    <div id="descs" style="display: none;">{DESCRIPTIONS}</div>
+  </body>
+</html>
