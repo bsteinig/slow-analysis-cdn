@@ -57,9 +57,24 @@ const handleClick = () => {
   comp_title.innerHTML = titles[index];
   comp_info.innerHTML = content[index];
 
-  /* set highlight position */
+  const clipPath = `polygon(0% 0%, 0% 100%, ${
+    coordList[index].startX * 100
+  }% 100%, ${coordList[index].startX * 100}% ${
+    coordList[index].startY * 100
+  }%, ${coordList[index].endX * 100}% ${coordList[index].startY * 100}%,  ${
+    coordList[index].endX * 100
+  }%  ${coordList[index].endY * 100}%,  ${coordList[index].startX * 100}%  ${
+    coordList[index].endY * 100
+  }%,  ${coordList[index].startX * 100}% 100%, 100% 100%, 100% 0%)`;
+
+  /* set inset clip-path on highlight */
+  console.log(clipPath)
+  highlight.style.setProperty('clip-path', clipPath);
+
+  /* set highlight position 
   mask.style.left = coordList[index].startX * 100 + "%";
   mask.style.top = coordList[index].startY * 100 + "%";
   mask.style.width = (coordList[index].endX - coordList[index].startX) * 100 + "%";
   mask.style.height = (coordList[index].endY - coordList[index].startY) * 100 + "%";
+  */
 };

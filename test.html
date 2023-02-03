@@ -10,27 +10,28 @@
   <body>
     <div class="container">
       <div class="img-comp">
-        <div class="img-comp-highlight" id="highlight"></div>
+        <div class="img-comp-highlight" id="img-comp-highlight"></div>
         <img
-          src={IMAGE}
+          src="{IMAGE_URL}"
           alt="graphic"
           class="responsive"
+          id="img-comp-img"
         />
       </div>
       <div class="info-comp">
-        <h1 class="headline">
-          {PROJECT_TITLE}
-        </h1>
+        <h1 class="headline">{PROJECT_TITLE}</h1>
+        <div class="text-container">
+          <h3 class="comp-title" id="comp-title">Click Next to begin</h3>
+          <h5 class="comp-info" id="comp-info"></h5>
+        </div>
         <div class="btn-group">
           <button class="btn" onclick="backClick()">Back</button>
           <button class="btn" onclick="nextClick()">Next</button>
         </div>
-        <h3 class="comp-title" id="comp-title">Click Next to begin</h3>
-        <h5 class="comp-info" id="comp-info"></h5>
       </div>
     </div>
     <script src="script.js" async defer></script>
-    <div id="titles" style="display: none;">{GRAPH DESC}</div>
-    <div id="descs" style="display: none;">{DESCRIPTIONS}</div>
+    <div id="titles" style="display: none">{GRAPH DESC}</div>
+    <div id="descs" style="display: none">{DESCRIPTIONS}</div>
   </body>
 </html>
